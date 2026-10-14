@@ -1,10 +1,10 @@
 # Gophr Privacy Policy
 
-Last updated: September 16, 2026
+Last updated: October 13, 2026
 
-This policy explains how Gophr for iPhone and Apple Watch handles your information. “We” and “us” mean the developer of Gophr.
+This policy explains how Gophr for iPhone and Apple Watch handles your information and describes its companion website. “We” and “us” mean the developer of Gophr.
 
-Gophr records walks, runs, and rides and creates a personal activity history and heatmap. Your activity history is stored on your devices. You do not need a Gophr account, and we do not operate a server that receives your activity history. Optional Apple services, backups, exports, and support communications are described below.
+Gophr records walks, runs, cycles, and drives and creates a personal activity history and heatmap. Your activity history is stored on your devices. You do not need a Gophr account, and we do not operate a server that receives your activity history. Optional Apple services, backups, exports, and support communications are described below.
 
 ## Information Gophr accesses and how it is used
 
@@ -16,13 +16,13 @@ Gophr stores activity type, start and end times, recording events such as pauses
 
 You can also enter activity names, notes, dates, and manually drawn or edited routes. If you import a backup, Gophr reads the activity information in the file you select and stores it locally for these same purposes.
 
-### Motion and fitness permissions
+### Location permission choices
 
-Gophr may request access to motion and fitness information through Apple's device APIs to support activity recording. Permission status is used to determine which recording features are available. Gophr does not send motion information to a Gophr server.
+Onboarding and browsing do not require location permission. Gophr explains and requests location access when you choose GPS recording or current location. Recording may request precise and background access to preserve your route while the screen is locked. Denying location leaves manual entries, history, backups, and exports available. Gophr does not request Motion & Fitness permission or collect Core Motion activity readings.
 
 ### Apple Health
 
-If you enable **Export workouts to Apple Health** and grant the relevant permissions, Gophr uses HealthKit during Apple Watch workouts. It requests access to read heart rate, active energy burned, walking/running distance, and cycling distance, and permission to save workouts, workout routes, active energy, and distance. Available measurements are used to support the active workout and its record in Apple Health and Fitness.
+If you enable **Export workouts to Apple Health** and grant the relevant permissions, Gophr uses HealthKit on your paired Apple Watch for eligible walks, runs, and cycles. This includes Watch-started workouts and iPhone-started workouts mirrored to the Watch. Drive activities are not exported as fitness workouts. It requests access to read heart rate, active energy burned, walking/running distance, and cycling distance, and permission to save workouts, workout routes, active energy, and distance. Available measurements are used to support the active workout and its record in Apple Health and Fitness.
 
 Health access is optional. Gophr does not use HealthKit information for advertising, marketing, data brokerage, or unrelated profiling, and does not send it to a Gophr server. Apple controls storage and any synchronization of your Health records under your Apple settings.
 
@@ -32,9 +32,31 @@ Gophr stores preferences such as units, map options, and Health export settings,
 
 Gophr can generate local diagnostic logs containing technical events, activity identifiers, timestamps, and error details to help troubleshoot recording, synchronization, and Health export. Gophr has no third-party advertising, tracking, or analytics service. Apple may provide crash reports, diagnostics, or TestFlight feedback according to your Apple settings and Apple's policies. We use reports we receive to diagnose problems and improve reliability.
 
+### Purchases and free activity allowance
+
+Gophr uses Apple's StoreKit to offer the one-time **Gophr_full** purchase. Apple processes payment and provides signed purchase and entitlement information, including the product identifier, transaction status, and revocation status. Gophr verifies this information on your device to unlock activity recording, manual entry creation and editing, and backup imports after the free 20 km allowance. We do not receive your payment card details or send your activity history to Apple for purchase verification. Apple retains purchase records under its own policies; deleting Gophr does not delete your App Store purchase history.
+
+Gophr stores activity identifiers and the highest distance counted for each activity locally to measure cumulative use of the free allowance. Shortening or deleting activities, clearing local activity data, or importing an older backup does not reset that allowance. The paired iPhone and Apple Watch exchange these usage records and purchase access status to apply the limit on both devices. These records are not sent to a developer-operated server. Usage records remain until the app is deleted from the relevant device; device backups and paired-device synchronization may restore them. History viewing and data exports remain available without purchasing. Gophr does not offer ad-supported access or include an advertising SDK.
+
 ### Information you send to support
 
 If you contact us, we receive the contact details, message, and any files or diagnostics you choose to provide. We use them to respond, troubleshoot, and handle privacy requests. You do not need to send your activity history or Health information to ask a privacy question.
+
+## Coverage goals and network downloads
+
+Goals is available in development and internal TestFlight branch builds. It is hidden in external TestFlight and production branch builds. In Goals, you can draw polygons or circles, give them names, choose eligible activity types, and configure a network dataset URL. Gophr stores these goal definitions and their dataset version locally. It reads saved activity coordinates, timestamps, accuracy and pause/filter flags from local history to estimate the unique walking-network distance covered inside each area. Repeated travel does not earn duplicate coverage. Route matching and coverage calculations take place on the iPhone; goal polygons and activity history are not uploaded to the tile host.
+
+Opening or calculating a configured goal downloads a static manifest and the road/path tiles needed for that area over HTTPS. The bucket/CDN operator receives the device's IP address, request time and requested file paths; tile paths reveal the approximate geographic area requested. These requests deliver network data and may be logged by the host for service operation and security. Gophr sends no account identifier, activity identifier, route trace, goal name or exact polygon with those requests and uses no advertising or analytics SDK for Goals. Apple MapKit also provides the basemap under the map practices described below.
+
+Goal definitions remain locally until you delete them in Goals or use Settings → Clear local data. Clearing local data removes the saved goals and dataset URLs together with other settings. The current activity backup and export formats do not include goal definitions or dataset settings. Coverage results are temporary and are recalculated from saved activities, excluding deleted and discarded activities. Downloaded public network files are kept in a size-limited device cache and may be evicted by Gophr or iOS; deleting the app removes this cache. Cached network files contain no activity history or polygon definitions.
+
+To stop future tile requests, leave Goals or remove its dataset URL. Leaving Goals cancels its calculation after any in-flight download or computation finishes. Deleting a goal does not delete your activities. For a host you configure independently, consult that provider's retention policy and request deletion of request logs from that provider. Any host we select to deliver Gophr data must provide the same or equal protection described in this policy and required by Apple's guidelines, including limits on use, retention and deletion. We use any request logs we receive only as long as necessary for delivery, troubleshooting and security, and you may request deletion through the contact method below.
+
+## Companion website and policy links
+
+The companion Gophr website loads fonts from Google Fonts. Visiting it can send Google your IP address and browser/request information needed to retrieve those fonts. This website font loading is separate from the native app, which does not load Google Fonts. The checked website contains no advertising or analytics integration. The website host may receive ordinary page-request information; its handling depends on the host's own practices.
+
+Opening a policy, attribution, or support link launches the relevant website, such as GitHub, Apple, or OpenStreetMap. That website receives normal web-request information and handles it under its own privacy terms. Opening these links does not attach your Gophr activity database, route history, or Health records.
 
 ## When information leaves your device
 
@@ -55,7 +77,7 @@ When you independently choose a storage provider or share an exported file with 
 
 **On-device history:** Gophr retains activity history on your device until you remove it. There is no automatic expiration period. Deleting an individual activity hides it from normal history and map views, but is a **soft delete**: the underlying activity and route records can remain in local storage and can be included in backups and exports. Discarded recordings can also leave local records.
 
-**Clear local data:** To remove the activity records, route points, recording events, summaries, and derived map data from Gophr's iPhone data store, open **Settings → Clear local data → Delete local data**. This also clears settings stored in that data store. It does not delete copies in Apple Health, backup folders, exported files, device backups, or on your Apple Watch. It is not a secure-erasure guarantee for underlying device storage.
+**Clear local data:** To remove the activity records, route points, recording events, summaries, and derived map data from Gophr's iPhone data store, open **Settings → Clear local data → Delete local data**. This also clears settings stored in that data store. It does not clear the separately stored free-allowance usage records or revoke an App Store purchase. It does not delete copies in Apple Health, backup folders, exported files, device backups, or on your Apple Watch. It is not a secure-erasure guarantee for underlying device storage.
 
 **Apple Watch:** After the iPhone acknowledges an imported Watch recording, Gophr removes the corresponding Watch route points and recording events; some activity metadata and preferences can remain. An iPhone data reset does not reset the Watch app. To remove remaining Watch app data, delete Gophr from the Watch as well. Pending Watch transfers or later backup imports can bring activity data back to the iPhone.
 
@@ -70,11 +92,10 @@ When you independently choose a storage provider or share an exported file with 
 ## Your choices and withdrawing permission
 
 - Change or revoke Gophr's location permission, including precise location and background access, in your device's **Settings → Privacy & Security → Location Services**. This may limit location display and route recording.
-- Revoke motion access in **Settings → Privacy & Security → Motion & Fitness**.
 - Turn off **Export workouts to Apple Health** in Gophr's Settings and manage Gophr's read and write permissions in Apple Health. Stop an active workout before changing export settings if you want it to stop using Health.
 - Turn off **Automatic** in Gophr's **Settings → Backup** to stop future automatic backups.
 - Use **Settings → Backup → Export data** to obtain a copy of your activity data, and the deletion controls described above to remove it.
-- Manage whether activity information appears on your Lock Screen, Dynamic Island, or Watch widgets using Apple's Live Activity, notification, and widget settings. These surfaces can show activity details to someone who can see your device.
+- Manage whether activity information appears on your Lock Screen, Dynamic Island, or Watch widgets using Apple's Live Activity, notification, and widget settings. These surfaces can show activity details to someone who can see your device. The CarPlay preview available in development and internal TestFlight builds displays existing recording and map information on the iPhone; it does not introduce a separate account or developer-operated upload service.
 
 Device menu names may vary by operating system version. Withdrawing permission stops future access governed by that permission; it does not automatically erase information already recorded or shared.
 
@@ -89,3 +110,4 @@ We will update this policy when Gophr's data practices change and revise the dat
 ## Contact and privacy requests
 
 To ask a privacy question or request deletion of information you have sent us, contact the developer through the **App Support** link on Gophr's App Store product page. For TestFlight builds, you can also use **Send Beta Feedback** in TestFlight. Identify your request as a Gophr privacy request and describe the information involved without including unnecessary location or Health data.
+
