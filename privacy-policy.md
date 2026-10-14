@@ -109,5 +109,6 @@ We will update this policy when Gophr's data practices change and revise the dat
 
 ## Contact and privacy requests
 
-To ask a privacy question or request deletion of information you have sent us, contact the developer through the **App Support** link on Gophr's App Store product page. For TestFlight builds, you can also use **Send Beta Feedback** in TestFlight. Identify your request as a Gophr privacy request and describe the information involved without including unnecessary location or Health data.
+To ask a privacy question, request support, or request deletion of information you have sent us, email [hello@justincredibuilt.com](mailto:hello@justincredibuilt.com?subject=Gophr%20Support). Settings includes a link that opens your email app with the subject **Gophr Support**; Gophr does not automatically attach your activity history or send the email.
 
+You can also use the **App Support** link on Gophr's App Store product page or **Send Beta Feedback** in TestFlight. Describe the information involved without including unnecessary location or Health data. We cannot remotely access or delete information held only on your devices or in storage accounts you control.
