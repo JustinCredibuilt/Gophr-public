@@ -1,6 +1,6 @@
 # Gophr Privacy Policy
 
-Last updated: October 13, 2026
+Last updated: November 5, 2026
 
 This policy explains how Gophr for iPhone and Apple Watch handles your information and describes its companion website. “We” and “us” mean the developer of Gophr.
 
@@ -34,9 +34,11 @@ Gophr can generate local diagnostic logs containing technical events, activity i
 
 ### Purchases and free activity allowance
 
-Gophr uses Apple's StoreKit to offer the one-time **Gophr_full** purchase. Apple processes payment and provides signed purchase and entitlement information, including the product identifier, transaction status, and revocation status. Gophr verifies this information on your device to unlock activity recording, manual entry creation and editing, and backup imports after the free 20 km allowance. We do not receive your payment card details or send your activity history to Apple for purchase verification. Apple retains purchase records under its own policies; deleting Gophr does not delete your App Store purchase history.
+Gophr uses Apple's StoreKit to offer the yearly **Gophr_sub** subscription. Apple processes payment and provides signed purchase and entitlement information, including the product identifier, transaction status, renewal status, and revocation status. Gophr verifies this information on your device to unlock activity recording, manual entry creation and editing, and backup imports after the free 20 km allowance. We do not receive your payment card details or send your activity history to Apple for purchase verification. Apple retains purchase records under its own policies; deleting Gophr does not delete your App Store purchase history.
 
 Gophr stores activity identifiers and the highest distance counted for each activity locally to measure cumulative use of the free allowance. Shortening or deleting activities, clearing local activity data, or importing an older backup does not reset that allowance. The paired iPhone and Apple Watch exchange these usage records and purchase access status to apply the limit on both devices. These records are not sent to a developer-operated server. Usage records remain until the app is deleted from the relevant device; device backups and paired-device synchronization may restore them. History viewing and data exports remain available without purchasing. Gophr does not offer ad-supported access or include an advertising SDK.
+
+Gophr Yearly automatically renews each year unless you cancel through your Apple Account subscription settings. Clearing local data or deleting Gophr does not cancel a subscription. The purchase screen links to subscription management, this policy, and the [Apple Standard End User License Agreement (Terms of Use)](https://www.apple.com/legal/internet-services/itunes/dev/stdeula/). Opening these links sends normal web-request information to the relevant website, as described below.
 
 ### Information you send to support
 
